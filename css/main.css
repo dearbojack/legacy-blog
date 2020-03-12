@@ -179,22 +179,22 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 0.775em;
+  font-size: 1.5em;
 }
 h2 {
-  font-size: 0.65em;
+  font-size: 1.375em;
 }
 h3 {
-  font-size: 0.525em;
+  font-size: 1.25em;
 }
 h4 {
-  font-size: 0.4em;
+  font-size: 1.125em;
 }
 h5 {
-  font-size: 0.275em;
+  font-size: 1em;
 }
 h6 {
-  font-size: 0.15em;
+  font-size: 0.875em;
 }
 p {
   margin: 0 0 20px 0;
@@ -999,7 +999,7 @@ pre .javascript .function {
   border-bottom: none;
   color: #fff;
   display: inline-block;
-  line-height: 0.9em;
+  line-height: 1.375em;
   padding: 0 40px;
   position: relative;
 }
@@ -1009,7 +1009,7 @@ pre .javascript .function {
 .site-title {
   display: inline-block;
   font-family: 'Palatino', "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.9em;
+  font-size: 1.375em;
   font-weight: normal;
   line-height: 1.5;
   vertical-align: top;
@@ -1195,7 +1195,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f6ffd4;
+  background: #bfff22;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
