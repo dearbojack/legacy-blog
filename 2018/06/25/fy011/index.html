@@ -12,12 +12,12 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source Serif Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="本文为SwiftGG项目组翻译文章，原文链接在此。原作者：Soroush Khanlou原标题：Just Controllers翻译：PlayerUnkown译文版权归译者所有，商业转载请联系译者。  苹果官方文档中提到了 MVC 的软件设计模式。不过，苹果介绍的并不是本质意义上的 MVC 。关于这一点我之前也有写过一篇文章，MVC 是为 Smalltalk 语言设计的一种设计模式。在 Small">
@@ -25,7 +25,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="不要视图，只要控制器，成不？">
 <meta property="og:url" content="http://yoursite.com/2018/06/25/fy011/index.html">
-<meta property="og:site_name" content="翻译之外">
+<meta property="og:site_name" content="不止翻译">
 <meta property="og:description" content="本文为SwiftGG项目组翻译文章，原文链接在此。原作者：Soroush Khanlou原标题：Just Controllers翻译：PlayerUnkown译文版权归译者所有，商业转载请联系译者。  苹果官方文档中提到了 MVC 的软件设计模式。不过，苹果介绍的并不是本质意义上的 MVC 。关于这一点我之前也有写过一篇文章，MVC 是为 Smalltalk 语言设计的一种设计模式。在 Small">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-08-21T10:28:59.852Z">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>不要视图，只要控制器，成不？ | 翻译之外</title>
+  <title>不要视图，只要控制器，成不？ | 不止翻译</title>
   
 
 
@@ -97,11 +97,11 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">翻译之外</span>
+        <span class="site-title">不止翻译</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-        <p class="site-subtitle">Go beyond.</p>
+        <p class="site-subtitle">Maybe more.</p>
   </div>
 
   <div class="site-nav-right"></div>
@@ -171,7 +171,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="翻译之外">
+      <meta itemprop="name" content="不止翻译">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -271,6 +271,35 @@
     
     
     
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/images/wechat_qrcode.jpg">
+                <span class="icon">
+                  <i class="fa fa-wechat"></i>
+                </span>
+
+                <span class="label">WeChat</span>
+              </a>
+            </div>
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
+                </span>
+
+                <span class="label">RSS</span>
+              </a>
+            </div>
+    </div>
+  </div>
+
 
       <footer class="post-footer">
           <div class="post-tags">
@@ -355,6 +384,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="PlayerUnknown"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">PlayerUnknown</p>
   <div class="site-description" itemprop="description">A translator you can trust.</div>
 </div>
@@ -363,7 +394,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -381,6 +412,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:ross4han@gmail.com" title="E-Mail → mailto:ross4han@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/p/1005052736192503" title="Weibo → https://weibo.com/p/1005052736192503" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+  </div>
 
 
 
@@ -407,10 +446,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">PlayerUnknown</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
-  </div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a>
   </div>
 
         
