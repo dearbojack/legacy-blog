@@ -1,39 +1,460 @@
-extends includes/layout
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-block content
-
-    section#wrapper.post
-        article
-            header
-                h1!=page.title
-                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
-                    |·
-                    |#{wordcount(page.content)} words
-                    |·
-                    |#{min2read(page.content)} minutes read
-                    span.tags
-
-            if toc(page.content)
-                div#toc!=toc(page.content,{list_number:false})
-
-            section#post-body!=page.content
-
-            - var prev = page.prev ? page.prev.path : false;
-            - var next = page.next ? page.next.path : false;
-            nav#post-nav
-                span.prev
-                    if page.prev
-                        a(href=url_for(prev))
-                            span.arrow ←
-                            | Newer Posts
-                span.next
-                    if page.next
-                        a(href=url_for(next))
-                            | Older Posts
-                            span.arrow →
-
-            include includes/comment.pug
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本文为SwiftGG项目组翻译文章，原文链接在此。原作者：Soroush Khanlou原标题：Just Controllers翻译：PlayerUnkown译文版权归译者所有，商业转载请联系译者。  苹果官方文档中提到了 MVC 的软件设计模式。不过，苹果介绍的并不是本质意义上的 MVC 。关于这一点我之前也有写过一篇文章，MVC 是为 Smalltalk 语言设计的一种设计模式。在 Small">
+<meta name="keywords" content="swift,编程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不要视图，只要控制器，成不？">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/fy011/index.html">
+<meta property="og:site_name" content="翻译之外">
+<meta property="og:description" content="本文为SwiftGG项目组翻译文章，原文链接在此。原作者：Soroush Khanlou原标题：Just Controllers翻译：PlayerUnkown译文版权归译者所有，商业转载请联系译者。  苹果官方文档中提到了 MVC 的软件设计模式。不过，苹果介绍的并不是本质意义上的 MVC 。关于这一点我之前也有写过一篇文章，MVC 是为 Smalltalk 语言设计的一种设计模式。在 Small">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-21T10:28:59.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="不要视图，只要控制器，成不？">
+<meta name="twitter:description" content="本文为SwiftGG项目组翻译文章，原文链接在此。原作者：Soroush Khanlou原标题：Just Controllers翻译：PlayerUnkown译文版权归译者所有，商业转载请联系译者。  苹果官方文档中提到了 MVC 的软件设计模式。不过，苹果介绍的并不是本质意义上的 MVC 。关于这一点我之前也有写过一篇文章，MVC 是为 Smalltalk 语言设计的一种设计模式。在 Small">
+
+<link rel="canonical" href="http://yoursite.com/2018/06/25/fy011/">
 
 
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>不要视图，只要控制器，成不？ | 翻译之外</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">翻译之外</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Go beyond.</p>
+  </div>
+
+  <div class="site-nav-right"></div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/25/fy011/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="PlayerUnknown">
+      <meta itemprop="description" content="A translator you can trust.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="翻译之外">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          不要视图，只要控制器，成不？
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-06-25 12:05:50" itemprop="dateCreated datePublished" datetime="2018-06-25T12:05:50+08:00">2018-06-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-21 18:28:59" itemprop="dateModified" datetime="2019-08-21T18:28:59+08:00">2019-08-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/翻译/" itemprop="url" rel="index">
+                    <span itemprop="name">翻译</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文为<a href="https://swift.gg/" target="_blank" rel="noopener">SwiftGG项目组</a>翻译文章，<a href="http://khanlou.com/2018/02/just-controllers/" target="_blank" rel="noopener">原文链接在此</a>。<br>原作者：Soroush Khanlou<br>原标题：Just Controllers<br>翻译：<em>PlayerUnkown</em><br>译文版权归译者所有，商业转载请联系<a href="dearbojack.github.io">译者</a>。</p>
+<hr>
+<p>苹果官方文档中提到了 MVC 的软件设计模式。不过，苹果介绍的并不是本质意义上的 MVC 。<a href="http://khanlou.com/2014/03/model-view-whatever/" target="_blank" rel="noopener">关于这一点我之前也有写过一篇文章</a>，MVC 是为 Smalltalk 语言设计的一种设计模式。在 Smalltalk 语言里，MVC 的三个组件：模型（model）、视图（view）和控制器（controller）之间都可以相互通信。这就意味着或者视图知道如何实现一个模型，或者模型知道如何在视图中应用自己。</p>
+<p>我们写 iOS 软件的时候，通常会把可以直接通信的视图和模型称之为“反模式”，不推荐这么做。我们所谓的 MVC 更准确的说其实是“模型-视图-适配器（Model - View - Adapter）”。我们说的“视图控制器”（适配器）其实只是模型和视图中间沟通的一个桥梁。笼统来讲，我觉得这是对正统MVC一个不错的改良——不是把视图和模型绑在一起，而是通过一个适配器把模型和视图联系起来，这个方法不错。然而，我不得不说，在我工作中涉及到的很多系统里，其实模型和视图都是分开的。</p>
+<p>以上就是为什么 iOS开发里会有视图控制器的原因：把模型和视图联系起来。但是这种模式的编码会产生一些问题：有一些代码看起来既不属于模型，也不属于视图，所以我们就把这些代码放到了视图控制器里，最后视图控制器变得超级臃肿。关于这个问题，我在博客里面讨论过<a href="http://khanlou.com/2015/10/coordinators-redux/" target="_blank" rel="noopener">很多次</a>，但这次我想说的不是这个问题。</p>
+<hr>
+<p>我私下里听到过很多关于<code>UIViewController</code>的谈论。我认为<code>UIViewController</code>这个基本类写的不是很好，这个你用 UIKit 用得越久就越能感觉到。我听说<code>UIViewController</code>这个基本类型有1万到2万行代码（那是几年前了，现在可能已经超过两万行了）。</p>
+<p>当我们需要把<code>UIView</code>和一个模型联系起来的时候，我们通常会把视图控制器分成一个个小的 视图控制器组件，然后再组装到一起。</p>
+<p>但是，这样做太大动干戈（小题大做）了。一个小地方没处理好，就会出现很多bug，而且这样的bug很难修复，也没有什么提示。然后，当你终于找到bug的时候，bug通常是对<code>didMove</code>或者<code>willMove</code>调用的顺序不对，程序忽然就好了。其实，出现了<code>didMove</code>和<code>willMove</code>已经说明这些组件一些内部状态需要清理了。</p>
+<p>这样的情况我自己就遇到过两次。第一次是我把视图控制器放在了<code>tableView</code>的<code>cell</code>里。出现的bug就是，table view里面的一些内容总会莫名其妙地消失。然后过了好几个月，我才意识到我对 table view cells的生命周期理解有误。</p>
+<p>在我改正了一些对<code>-addChildViewController</code>的调用之后，程序就正常运行了。</p>
+<p>这件事让我看到了一个很大的问题：视图控制器的视图并不是一个普普通通的视图。它知道自己不是一个普通的视图，而是一个视图控制器的视图，它有自己一些特性。</p>
+<p>回过头去看，一切都很明显。<code>UIViewController</code>怎么知道什么时候该去调用<code>viewDidLayoutSubviews</code>?肯定是<code>view</code>向它发送了请求，这就意味着视图对视图控制器是有一些了解的。</p>
+<p>第二次是最近碰到的，这次我是在把一个视图控制器的视图作为一个text field 的<code>inputAccessoryView</code>。我是在实现一个通信软件（类似 iMessage）里<code>textField</code>贴在屏幕底部的功能，整个过程十分挫败。我花了整整一天时间都没搞定，最后还是把这个视图转换成了一个普通的视图。</p>
+<hr>
+<p>所以，我们通常想让<code>UIViewController1</code>做的是哪些事情呢？</p>
+<ul>
+<li>承载视图</li>
+<li>把模型和视图联系起来</li>
+</ul>
+<p>那<code>UIViewController1</code>还做了那些我们并不十分在意的事呢？</p>
+<ul>
+<li>为子视图控制器提供存储</li>
+<li>把外观和过渡动画推送给子视图控制器</li>
+<li>可以在类似<code>UINavigationController</code>的容器中显示</li>
+<li>内存过低通知</li>
+<li>处理状态栏</li>
+<li>保存状态、恢复状态</li>
+</ul>
+<p>知道了这些，在一些特殊情况下，我们要做一个替代视图控制器的东西的时候，我们就知道了哪些东西是我们并不需要的。我喜欢这样，因为这样可以快速地解决问题，同时也符合我“自己的事情自己做”的性格。</p>
+<p>还有一个问题，这个东西怎么命名呢？我觉得命名成一个视图控制器不太好，很容易被误解为一个<code>UIViewController</code>的子类。或者，我们就叫它<code>Controller</code>?我觉得可以（<a href="http://khanlou.com/2014/11/a-controller-by-any-other-name/" target="_blank" rel="noopener">尽管我之前可能有其他观点</a>），因为它的作用就是iOS MVC设计框架中控制器的作用（把视图和模型联系起来），但是还有其他一些备选：<code>Binder</code>（粘合）, <code>Binding</code>（捆绑）, <code>Pair</code>（配对）, <code>Mediator</code>（中介）, <code>Concierge</code>（前台）。</p>
+<p>这个做法还有一个好处是，<strong>特别好写</strong>。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DestinationTextFieldController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> destination: <span class="type">Destination?</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">weak</span> <span class="keyword">var</span> delegate: <span class="type">DestinationTextFieldControllerDelegate?</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> textField = <span class="type">UITextField</span>().configure(&#123;</span><br><span class="line">        $<span class="number">0</span>.autocorrectionType = .no</span><br><span class="line">        $<span class="number">0</span>.clearButtonMode = .always</span><br><span class="line">    &#125;)</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不用<code>UIViewController</code>的子类，写个这样的东西，可能会有人喊，“异教徒！烧死他！”但是，当<code>UIViewController</code>没有把自己该做的事情做好的时候，我们就应该抛弃它。</p>
+<p>大家已将知道怎么给自己的新对象加新功能了。在我的这个例子中，控制器成了<code>textField</code>的代理，文字变化时发出事件（以及域元数据 domain metadta），同时提供更新视图（这个例子中是<code>textField</code>）的接口。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">DestinationTextFieldController</span> </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> isActive: <span class="type">Bool</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">self</span>.textField.isFirstResponder</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">func</span> <span class="title">update</span><span class="params">(with destination: Destination)</span></span> &#123;</span><br><span class="line">		<span class="keyword">self</span>.destination = destination</span><br><span class="line">		configureView()</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">configureView</span><span class="params">()</span></span> &#123;</span><br><span class="line">		textField.text = destination.descriptionForDisplay</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用这种新的控制器你还需要做其他几件事：</p>
+<ul>
+<li>你得新建一个实例变量来存储数据</li>
+<li>你得负责一些触发事件——因为它不是一个视图控制器，没有<code>-viewDidAppear</code></li>
+<li>你不是在<code>UIKit</code>框架里面了，所以其他一些<code>UIKit</code>的特性（<a href="https://developer.apple.com/documentation/uikit/uitraitcollection" target="_blank" rel="noopener">UITraitCollection</a>, <a href="https://developer.apple.com/documentation/uikit/uiview/positioning_content_relative_to_the_safe_area" target="_blank" rel="noopener">safe area insets</a>, 或者<a href="https://developer.apple.com/documentation/uikit/uiresponder" target="_blank" rel="noopener">UIResponder</a>）你都不能再使用了。如果要使用，你必须自己实现。</li>
+</ul>
+<p>使用这个对象不是很难，不过你还是需要写明它的数据存储方式， 防止它的内存被回收。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyViewController</span>: <span class="title">UIViewController</span>, <span class="title">DestinationTextFieldControllerDelegate</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">let</span> destinationViewController = <span class="type">DestinationTextFieldController</span>()</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">super</span>.viewDidLoad()</span><br><span class="line">		destinationViewController.delegate = <span class="keyword">self</span></span><br><span class="line">		view.addSubview(destinationViewController.view)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//handle any delegate methods</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>话说回来，即使你使用我说的这个方法，其他大部分的视图应该还会是视图控制器和<code>UIViewController</code>的子类。不过，在某些特殊的情况下，整合一个视图控制器会耗费你过多的精力，这时候采用这种方法，就可以避免再次被<code>UIKit</code>折磨。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/swift/" rel="tag"># swift</a>
+              <a href="/tags/编程/" rel="tag"># 编程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/06/25/fy012/" rel="prev" title="Swift 4 中的字符串">
+      <i class="fa fa-chevron-left"></i> Swift 4 中的字符串
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/06/04/fy000/" rel="next" title="试译：真实 Verity">
+      试译：真实 Verity <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">PlayerUnknown</p>
+  <div class="site-description" itemprop="description">A translator you can trust.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">33</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PlayerUnknown</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.7.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
