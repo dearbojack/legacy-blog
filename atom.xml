@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>不止翻译</title>
+  <title>卡盒笔记法中文网</title>
   
-  <subtitle>Maybe more.</subtitle>
+  <subtitle>Zettelkasten Note-taking</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>PlayerUnknown</name>
+    <name>MaxXD Khan</name>
     
   </author>
   
