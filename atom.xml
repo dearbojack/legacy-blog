@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>孤月印万川</title>
   
-  
+  <subtitle>Sweep the Babel tower.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiangji.ml/"/>
@@ -10,7 +10,7 @@
   <id>http://xiangji.ml/</id>
   
   <author>
-    <name>MaxXD Khan</name>
+    <name>Dali Khan</name>
     
   </author>
   
