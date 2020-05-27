@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>huodeshijian.html</title>
+
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3" />
+    <meta http-equiv="description" content="this is my page" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript">
+      //创建一个日期对象
+      function show() {
+        var d = new Date(); //获取年份 //var nian=d.getYear();//2016  //16
+        var nian = d.getFullYear(); //2016 //获取月
+        var yue = d.getMonth() + 1; //6   july 7月   0-11 //获取星期几
+        var xq = d.getDay(); //5    0-6    0:星期天 //获取几号
+        var dd = d.getDate(); //1    1-31 //获取小时
+        var h = d.getHours(); // 16下午4点     24小时制 //获取分钟
+        var m = d.getMinutes(); //31分 //获取描述
+        var s = d.getSeconds(); //50秒
+        if (h >= 0 && h <= 9) {
+          h = "0" + h;
+        }
+        if (m >= 0 && m <= 9) {
+          m = "0" + m;
+        }
+        if (s >= 0 && s <= 9) {
+          s = "0" + s;
+        }
+        if (yue >= 0 && yue <= 9) {
+          yue = "0" + yue;
+        }
+        if (dd >= 0 && dd <= 9) {
+          dd = "0" + dd;
+        }
+
+        document.getElementById("time").innerHTML =
+          yue + "月" + dd + "日" + "<br />" + h + ":" + m + ":" + s;
+      }
+      setInterval("show()", 1000);
+    </script>
+</head>
+  <body οnlοad="time()">
+
+    <div id="time">
+      <script type="text/javascript">
+        show();
+      </script>
+    </div>
+
+    <p id="p0">
+        王铁牛 <font color="white">This is some text!</font>  <font color="blue">修改 | 代办 </font>
+    </p>
+
+    <p id="p3">
+        
+    </p>
+
+    <div style="text-align: center; width: 500px; ">
+        <img id="code" src="codex400.png" alt="health code" height="150" width="150" style="display: inline-block; vertical-align: middle;" >
+    </div>
+
+    <p id="p1">本码支持在杭医疗机构挂号、就<br />诊及医保结算，直接出示扫码使<br />用</p>
+    <p id="p2">绿码：凭此码可在浙江省范围内通行，请主动出示，配合检查；并做好自身防护工作，码颜色将根据您的申报由当地政府按照相关政策动态更新，出行前请仔细检查您的健康码。</p>
+  </body>
+</html>
