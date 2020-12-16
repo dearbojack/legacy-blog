@@ -3,31 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://xiangji.ml/post/</loc>
     <lastmod>2020-12-16T16:21:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://xiangji.ml/</loc>
     <lastmod>2020-12-16T16:21:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/billionaire-built/</loc>
+    <loc>https://xiangji.ml/post/billionaire-built/</loc>
     <lastmod>2020-12-16T16:21:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/post/about/</loc>
+    <loc>https://xiangji.ml/post/about/</loc>
     <lastmod>2020-12-16T15:21:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://xiangji.ml/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://xiangji.ml/tags/</loc>
   </url>
   
 </urlset>

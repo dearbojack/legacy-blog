@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>孤月印万川</title>
-    <link>http://example.org/</link>
+    <link>https://xiangji.ml/</link>
     <description>Recent content on 孤月印万川</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 16 Dec 2020 16:21:30 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xiangji.ml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>成为亿万富翁</title>
-      <link>http://example.org/post/billionaire-built/</link>
+      <link>https://xiangji.ml/post/billionaire-built/</link>
       <pubDate>Wed, 16 Dec 2020 16:21:30 +0800</pubDate>
       
-      <guid>http://example.org/post/billionaire-built/</guid>
+      <guid>https://xiangji.ml/post/billionaire-built/</guid>
       <description>作者：Paul Graham
 译者：PranKhan（Twitter: @dearmaxi，公众号：土嗨英语）
 原文地址：http://paulgraham.com/ace.html
@@ -45,10 +45,10 @@
     
     <item>
       <title>关于译者</title>
-      <link>http://example.org/post/about/</link>
+      <link>https://xiangji.ml/post/about/</link>
       <pubDate>Wed, 16 Dec 2020 15:21:30 +0800</pubDate>
       
-      <guid>http://example.org/post/about/</guid>
+      <guid>https://xiangji.ml/post/about/</guid>
       <description>译者信息：
  推特: @dearmaxi 公众号：土嗨英语（PrankEnglish）  受不了 GitHub 对 markdown 脚注的支持，用 hugo 搭建了一个简单的网站，用来放一些翻译的文章。使用的主题是 schollz 制作的 onetwothree，很棒的主题，感谢。于 2020 年 12 月 15 日。
 版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</description>
