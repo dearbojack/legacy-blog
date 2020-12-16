@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>成为亿万富翁</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="成为亿万富翁">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="成为亿万富翁">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:site" content="@dearmaxi">
+	<meta name="twitter:creator" content="@dearmaxi">
+	<meta name="twitter:image:src" content="">
+	
+	
+	<meta name="og:title" content="成为亿万富翁">
+	<meta name="og:description" content="">
+	
+	<meta name="og:url" content="http://example.org/post/billionaire-built/">
+	<meta name="og:site_name" content="成为亿万富翁">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:author" content="dearmaxi">
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="/js/caption.js"></script>
+</head>
+<body>
+
+<header >
+	<a href="/" style="float: left;color:#777;"><strong>孤月印万川</strong>
+	</a>
+	<a href="/index.xml" style="color:#777;float: left;"><strong>
+		&nbsp;
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+</strong></a>
+<a href="http://example.org/post/about/" style="color:#777;"><strong>关于译者</strong></a>
+
+</header>
+
+
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
+<script>
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
+    last = +new Date();
+    
+
+    if (el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    } else {
+    	el.style.display='none';
+    }
+  };
+
+  tick();
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+         el = document.getElementById('loadingMask');
+         fadeOut(el);
+        var elements = document.querySelectorAll("img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("alt")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("alt"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+window.onload = ready;
+</script>
+
+<div class="content">
+	<h1>成为亿万富翁 <aside></aside></h1>
+	<p>作者：<a href="http://paulgraham.com/index.html">Paul Graham</a></p>
+<p>译者：PranKhan（Twitter: <a href="https://twitter.com/dearmaxi">@dearmaxi</a>，公众号：土嗨英语）</p>
+<p>原文地址：<a href="http://paulgraham.com/ace.html">http://paulgraham.com/ace.html</a></p>
+<hr>
+<p>决定下一篇文章该写些什么的时候，我惊讶地发现，之前计划写的两篇文章其实是一样的。</p>
+<p>第一篇文章，是关于如何在 Y Combinator 的面试中取得脱颖而出。关于这个话题已经有太多的无稽之谈，多年来我一直想写些东西告诉创始人真相。</p>
+<p>第二篇，是关于政客们的一个说法：成为亿万富翁的唯一途径就是剥削别人，我想讲讲为什么这个说法是错误的。</p>
+<p>继续读下去，你会同时学到这两个知识。</p>
+<p>我知道政客们的说法是错的，因为我的工作就是预测哪些人会成为亿万富翁。要谈这个问题的话，我想我比谁都够格。如果成为亿万富翁的关键是剥削别人的话，那么我作为一个专业的亿万富翁发掘者，肯定会意识到这一点，然后专门寻找这样的人，就像球探在市场上寻找优秀的球员那样。</p>
+<p>但是 YC 投资创业者完全不看那个所谓的“剥削别人的能力”。事实上，YC 所找的东西恰恰与之相反。我来跟你们说说应该如何说服 YC 投资你，在这个过程中，你就会知道 YC 会找什么样的人，然后你自己决定。</p>
+<p>简而言之，YC 所寻找的就是理解一群用户、并能做出这群用户想要的东西的创业者。这一点非常重要，YC 的信条就是“做出人们想要的东西。”</p>
+<p>在某种程度上，一个大公司可以强迫顾客购买不合适自己的产品，但是初创公司没有这个能力。创业公司必须为了生存而努力，而他们要做的就是真真正正地取悦用户；做不到这一点，它就永远无法起飞。</p>
+<p>这一点，无论对你这个创业者来说，还是对那些要决定是否投资你的 YC 合伙人来说，都很难。在市场经济中，用户想要的东西，早就有人生产出来了，很难轮得到你。这也是市场经济的伟大之处。如果其他人都知道用户的这个需求，并且能够满足它，那他们肯定早就行动了，轮不到你们这些初创公司。</p>
+<p>这就意味着在 YC 面试中，你要谈的必须是关于一些新的东西: 要么是一种新的需求，要么是一种新的满足需求的方式。新还不够，而且还得是不确定的。如果这种需求的的确确存在，而且你能够满足它，那么这种确定性就会反映在你巨大且快速增长的营收数字上，那你怎么还会需要种子轮的投资呢？</p>
+<p>因此，YC 合伙人必须同时弄清楚两个问题，一个是弄清楚你是否发现了真正的需求，还有一个是你做的东西到底能不能满足这个需求。他们就是专业的预言家，至少他们工作中这一部分就是这样。为了变得专业，他们学会了 1001 种方法，我不会给你一一讲解这 1001 种方法，但我很高兴给你说说其中最重要的几个，因为这些都是&quot;假冒&quot;不来的；唯一能&quot;作弊&quot;的方法就是，做那些你作为一个公司创始人本就该做的那些事。</p>
+<p>通常情况下，YC 合伙人首先要弄清楚的是，你做的东西是否会成为很多人想要的东西。一开始不一定要很多人。产品和市场都会进化，并且会相互影响。但是假以时日，它最终必须有一个巨大的市场。 YC 合伙人想要弄清楚的问题其实就是: 到底有没有一条路通向那个（属于你们所做的东西的）巨大的市场？<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>有时候，这个巨大的市场很明显就在那里。</p>
+<p>如果 <a href="https://boomsupersonic.com/">Boom</a> 成功做出一条航线，那国际航空公司肯定会买。但通常问题的答案并没有这么明显。通常通往巨大市场的必经之路，是培育、发展一个小市场。这一点十分重要，我们就把这些虽然小但可成长的市场称为“毛毛虫市场”吧。</p>
+<p>1976 年苹果公司的市场就是“毛毛虫市场”的绝佳例子。在 1976 年，没有多少人想要拥有自己的电脑。但慢慢地，越来越多的人开始有了这个需求，到今天，这个星球上每个 10 岁大的小孩子都想要自己的“电脑”（只不过我们现在称之为“手机”）。</p>
+<p>公司创始人的完美组合是，一些创始人<a href="http://paulgraham.com/startupideas.html">“活在未来”</a>，这些人永远在时代的前沿，引领着某种变革；还有一些创始人可以自己做出自己想要的东西。大多数超级成功的创业公司的创始人都是这种组合。史蒂夫·沃兹尼亚克想要一台电脑。马克·扎克伯格想和他的大学朋友在网上交流。拉里和谢尔盖想在网上搜索东西。这些创始人都在创造他们自己和自己的同辈想要的东西，而与此同时他们也在引领变革，意思就是越来越多的人也会想要这些创始人想要的东西。</p>
+<p>不过虽然说最理想的毛毛虫市场是你自己和同辈，也不是说只有这种。毛毛虫市场也可能是区域性的。你做的东西一开始服务某一区域的人，然后扩张到其他区域，等等。</p>
+<p>初始市场的关键特征是它必须存在。这一点好像不言自明，但大多数创业想法里面最大的缺陷其实就是不符合这一点。必须得有一些人想要你现在做的东西，而且还得是特别急迫地想要，即便有 bug 以及种种问题，即便你只是个他们从来没听说过的小公司，他们也想要用你们做的东西。这些人不一定要有很多，但一定要有一些。只要你有一些用户，就可以通过一些简单的方法可以获得更多的用户：建立他们想要的新功能，寻找更多像他们一样的人，让他们把你推荐给他们的朋友，等等。但这些方法全都需要最初的一群种子用户。</p>
+<p>所以，这是 YC 合伙人在 YC 面试的时候几乎肯定会深入研究的一件事。你们的第一批用户是谁？你怎么知道他们想要这个？如果让我仅仅根据一个简单的问题来决定是否投资创业公司，我要问的问题就是: “你怎么知道人们想要这个? ”</p>
+<p>对于这个问题，最有说服力的答案是“因为我们想要，我们的朋友也想要。”如果你已经制作了一个原型，即使它非常粗糙，你的朋友们也在使用它，并且通过口口相传的方式传播开来，那就更好了。如果你可以这么说，而且你没有撒谎，那么合伙人对你的态度，就会从否定转变为肯定。也就是说，如果你没有其他大的缺陷它，他就会投资你了。</p>
+<p>然而，这是一个很难达到的标准。Airbnb 并不满足这个要求。他们只符合前半部分。他们做出了自己想要的东西。但它并没有扩张和增长。所以，如果你没有达到这个黄金标准，不要感到难过。如果 Airbnb 都没有达到这个标准，那这个标准一定是太高了。</p>
+<p>在实际情况中， 如果 YC 合伙人发现你对你们用户的需求有很深的理解，他们就会很满意了。而 Airbnb 这一点确实没得说。他们跟我们讲了各种激励房主和住客的方法。他们这些知识来自他们的第一手的经验，因为他们就是第一批房主。我们问的问题，他们都能对答如流。我们自己作为用户，对他们的这个想法没那么兴奋，但我们知道这说明不了什么，因为很多创业公司做的事情我们不感兴趣，但它们也成功了。看着 Airbnb 几个人滔滔不绝的样子，我们心里在想“他们似乎对自己说的东西挺在行的。也许他们发现了什么好东西。他们的业务还没有成长起来，但他们可能在 YC 阶段可想清楚该做些什么。”后来事情正如我们所预料，进入 YC 三周之后他们就起飞了。</p>
+<p>在 YC 面试中，你能做的最好的事情就是向合伙人介绍你的用户。因此，如果你想为面试做准备，最好的方法之一就是去和你的用户交谈，弄清楚他们到底在想什么。而这，无论面试与否，都是你应该做的。</p>
+<p>说出来可能你们不会相信， YC 合伙人其实希望创始人来告诉他们关于市场的信息。想想风投们通常是如何判断一个想法的潜在市场的。他们自己并不是通常意义上的领域专家，所以他们把这个想法转发给有这个想法的人，并征求他们的意见。YC 没有时间这样做，但是如果 YC 合伙人能够说服自己，创始人(a)知道他们在说什么，(b)没有撒谎，他们就不需要外部领域的专家。在评估自己的想法时，他们可以把这些创始人当作各个领域的专家。</p>
+<p>这也是 YC 面试和推销的不同之处。为了让尽可能多的创始人有机会获得投资，我们尽可能缩短面试时间: 10 分钟。这些时间不足以让合伙人通过间接证据来判断，你是否知道自己在说什么，是否在说谎。他们需要深入挖掘,然后提问。时间根本不允许循序渐进。所以他们会随机访问（提问）。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>关于如何在 YC 面试中取得成功，我听到的最糟糕的建议是，你应该掌控面试，确保传达你想要的信息。这换句话说，就是把面试变成了推销。（一本正经的骂人。）这么做真是太让人讨厌了。你问他们一个问题，他们不回答你的问题，而是说一大堆明显是提前准备好的推销话。这么做，10 分钟很快就过去了。</p>
+<p>关于 YC 的面试，除了现任或前任 YC 合伙人之外，没有人能给你准确的建议。那些仅仅参加过面试、甚至面试成功的人，都说不清楚，YC 面试有各种各样的形式，根据合伙人最想了解的东西而变化。有时候面试是关于创始人的，有时候是关他们的创业想法的。有时候面试只会关注创业想法中的很小一个方面。有些创始人面试过后会抱怨，说他们根本没来得及说出自己的全部想法。没错，但他们说的已经足够了。</p>
+<p>因为 YC 面试是由问题组成的，要想在面试中表现得好，你就得回答好这些问题。而其中的一条，就是要坦率地回答这些问题。合伙人并不期望你什么都知道。但是如果你不知道一个问题的答案，不要试图通过胡扯糊弄过去。像大多数有经验的投资者一样，YC 合伙人都是专业的扯淡探测员，而你(充其量)只是一个业余扯淡者。如果你跟他们胡扯，然后被发现了，他们甚至不会拆穿你。所以最好的办法还是诚实一些，不要糊弄他们。如果你不知道问题的答案，就说你不知道，告诉他们你会怎么找到答案，或者告诉他们一些相关问题的答案。</p>
+<p>比如，如果你被问到哪里可能出错，最糟糕的答案可能就是“根本不会出错”。这不会让他们相信你的想法是无懈可击的，而会让他们觉得你是个傻瓜，或者是个骗子。一个好得多的方法是，谈谈各种可能出错的可怕细节。你如果问专家哪里可能会出错，他们通常都会这么做。YC 的合伙人知道你的想法会风险。在刚开始的时候，所有的好赌注都是那样：赢了就赚翻，但赢面不大。</p>
+<p>如果他们询问竞争对手的情况，也是如此。干掉创业公司的通常都不是竞争对手。而是（创业公司自己）糟糕的执行力。尽管如此，但你还是应该知道你的竞争对手是谁，并且坦率地告诉 YC 合伙人你的相对优势和劣势是什么。因为 YC 合伙人知道竞争对手不会搞垮创业公司，所以在这个问题上他们不会难为你。但是，如果你好像不知道竞争对手的存在，或者一直忽略竞争对手的威胁，他们就会在这个问题上难为你。他们可能不确定你是无知还是在撒谎，但他们也不需要知道。</p>
+<p>YC 合伙人并不期望你的创业想法是完美的。毕竟，这才只是种子阶段。在这个阶段，他们所期待的只是看上去颇有希望的假设。但，除此之外，他们还会希望你思维周全，坦率诚实。因此，如果你为了让自己的想法看起来完美无缺而让别人觉得你虚伪或者无知，那你就是捡了芝麻丢了西瓜。</p>
+<p>如果你说服了合伙人，确实有一条路可以通往一个大市场，那下一个问题就是你能不能找到那条路。这取决于三个因素：创始人的品质，他们对这一领域的专业知识，以及创始人之间的关系。创始人有多大的决心？他们擅长创造东西吗？他们是否有足够的韧性，在遇到挫折后继续前进？他们的友谊有多深厚？</p>
+<p>Airbnb 虽然在想法方面只能算 OK，但在这几个方面他们相当初色。Airbnb 几个人通过卖奥巴马和麦凯恩主题的麦片筹集创业的钱，这个故事是我们最终决定投资他们的最重要的一个因素。他们当时肯定想不到这一点，但是这个看起来不相关的故事，完美地展示了他们几个作为公司创始人的品质。表明他们聪明机智，意志坚定，而且他们几个可以齐心协力做好一件事情。</p>
+<p>不过，也不仅仅是那个麦片的故事。整个面试都能看出来他们很用心。他们创业不只是为了钱，或者耍酷。他们为这家公司如此努力的原因是因为这是他们的项目。他们发现了一个有趣的新想法，但他们就是不肯放弃。</p>
+<p>这听起来很平凡，但却是最强大的动力，不仅仅是在创业公司，在大多数雄心勃勃的事业中也是这样:</p>
+<p>对你所做的事情<a href="http://paulgraham.com/genius.html">真真正正</a>的感兴趣。这才是亿万富翁背后的动力，或者至少是那些通过创业成为亿万富翁的人背后的动力。公司就是他们的项目。</p>
+<p>关于亿万富翁，很少有人认识到的一点是，他们本可以早点放弃的。他们早就可以卖掉公司，或者找别人帮他们来管理公司。很多公司的创始人也确实这么做了。但那些真正富起来的人是那些一直坚持工作的人。而支撑他们一直工作的不只是钱。和那些本可以不工作但却一直坚持工作的人一样，他们坚持工作是因为，他们没有其他更想做的事情了。</p>
+<p>这才是那些通过创业成为亿万富翁的人的关键品质，不是什么剥削别人的能力。这也是 YC 面试创始人的时候所看重的:真实可靠。通常人们创业的动机都很复杂。通常都是下面这几个原因的组合：为了赚钱，为了耍酷，对解决问题感兴趣，或者不愿意给别人打工。后两个动机比前两个更有力量。创业者想赚钱或者想耍酷当然没问题。大多数人都喜欢这样。但如果创业只创业<em>只是</em>为了赚钱，或者<em>只是</em>为了耍酷，那他们就不可能获得大的成功。为了钱而创业的人，只要有人出足够多的钱收购，他就会立刻把公司卖出；为了耍酷而创业的人，很快就会发现别的不那么痛苦的耍酷方法。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>YC 当然也经常见到那些惯于剥削别人的创业者。对他们来说，YC 就像是一块磁铁，因为他们想要 YC 这块招牌。但是一旦 YC 合伙人发现他们是这样的人，就会拒绝他们。如果这些坏人创业很在行，那 YC 合伙人就会面临一个道德困境。庆幸的是他们不用，因为坏人通常都是很糟糕的创业者。这种剥削型的创始人不会获得大的成功，实际上，他们也可能都不会获得小规模的成功，因为他们总想着走捷径。YC 在他们看来就是一个捷径。</p>
+<p>他们的剥削通常会从对共同创业伙伴的剥削开始，这是灾难性的，因为共同创业伙伴的关系是一个公司的基础。然后他们的剥削会转移到用户身上，这也是灾难性的，因为一个创业公司想要成功，他最初的种子用户群体是最难被欺骗的。这类创始人所能期望的最好结果，就是让欺骗的大厦摇摇欲坠，直到有收购者被骗，收购它。但是这种收购从来都不是很大。<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<p>如果专业的侦测员都知道亿万富翁需要的并不是剥削别人的技巧，那为什么有些政客认为这是亿万富翁的关键品质呢？</p>
+<p>我觉得他们会这么想，是因为他们觉得一个人的钱比别人多那么多是不对的。知道这种感觉从何而来，就会知道这无可厚非。它存在于我们的 DNA 中，甚至存在于其他物种的 DNA 中。</p>
+<p>如果他们只是说，一个人的钱比其他人多太多了，这让他们感觉很糟糕，谁会不同意呢？这也让我感觉很糟糕，我认为那些赚了很多钱的人有道德义务花钱做公益。他们所犯的错是，因为一些人比其他人拥有的钱太多，而得出一个&quot;赚到那么多钱肯定用了什么卑鄙的手段&quot;的结论。不少人都是这样的想法，但它错了。</p>
+<p>当然有一些人通过什么卑鄙手段而赚到大钱。但是也有很多行为不端的人，没赚到那么多钱。你用什么手段和你赚多少钱，这两者之间并没有什么联系——其实，要说有相关性，还是负相关。</p>
+<p>这种无稽之谈危害颇大，其中最大的危险并不是会把政策引入歧途，而是它会误导那些胸怀大志的人。想象一下，告诉穷人家的孩子，想要赚大钱就是要剥削别人，而富人家的孩子从小看着自己的父辈如何赚钱，知道如何才能致富。还有什么方法能更高效地破坏社会的流动性呢？</p>
+<p>我来告诉你（要赚大钱）应该怎么做，这样你至少可以告诉你自己的孩子真相。一切都跟用户有关。成为亿万富翁最可靠的方法就是创办一家<a href="http://paulgraham.com/growth.html">快速增长</a>的公司，而要想快速增长就是要做出用户想要的东西。刚刚起步的创业公司别无选择，只能取悦用户，否则他们永远不会开始增长。但这一点应该一直是办公司的指导原则，一旦你让你的用户不开心，那就会有别人取悦他们。</p>
+<p>在 YC 面试中，YC 合伙人想要了解的东西就是用户。我在与我们 10 年前投资的创始人以及现在的亿万富翁交谈时想要了解的东西，也是用户。用户想要什么？你能为他们创造什么新东西？成为亿万富翁的创始人总是渴望谈论这个话题。他们就是这样成为亿万富翁的。</p>
+<p>感谢 Trevor Blackwell, Jessica Livingston, Robert Morris, Geoff Ralston 和 Harj Taggar 阅读本文的草稿。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>YC 的合伙人在这方面有着丰富的经验，他们有时会看到创始人自己都没有看到的路径。The partners don&rsquo;t try to seem skeptical, as buyers in transactions often do to increase their leverage. 虽然创始人认为他们的工作是让合伙人相信他们想法的潜力，但其实在面试中，角色经常发生反转，创始人在面试结束时会感觉他们的想法比他们意识到的更有潜力。 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>实际上，7 分钟就足够了。你很少在第八分钟改变主意。但是 10 分钟对大家来说更方便一些。 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>我自己在第一次创业的时候就接受了足够大的第一次收购邀请，所以我不怪创始人这么做。为了赚钱而创业并没有什么错。你总需要通过某些方式赚钱，对一些人来说，创业开公司是赚钱最有效的方式。我只是说这些创业公司不会有很大的发展。 <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>不过，现在好像也不是这样了。互联网泡沫时期有一些大桩收购，事实上也有一些公司后来上市了。 <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+
+
+	<p><small><em>Written December 16, 2020. </em>
+		 
+		Send feedback to <a  href="https://twitter.com/intent/tweet?text=%40dearmaxi%20%23postbillionaire-built%20">@dearmaxi</a>.
+		
+	</small></p>
+
+	<p>
+	<a href="/post/about/">← 关于译者</a>&nbsp;
+	
+	</p>
+
+
+
+
+
+
+<footer>
+	<span style="font-size:0.5em"><p></p></span>
+	<span style="font-size:0.5em">This site was made with <a href="https://github.com/gohugoio/hugo">Hugo</a> using theme <a href="https://github.com/schollz/onetwothree">onetwothree</a> made by <a href="https://github.com/schollz">schollz</a>.</span>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>关于译者</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="关于译者">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="关于译者">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:site" content="@dearmaxi">
+	<meta name="twitter:creator" content="@dearmaxi">
+	<meta name="twitter:image:src" content="">
+	
+	
+	<meta name="og:title" content="关于译者">
+	<meta name="og:description" content="">
+	
+	<meta name="og:url" content="http://example.org/post/about/">
+	<meta name="og:site_name" content="关于译者">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:author" content="dearmaxi">
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="/js/caption.js"></script>
+</head>
+<body>
+
+<header >
+	<a href="/" style="float: left;color:#777;"><strong>孤月印万川</strong>
+	</a>
+	<a href="/index.xml" style="color:#777;float: left;"><strong>
+		&nbsp;
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+</strong></a>
+<a href="http://example.org/post/about/" style="color:#777;"><strong>关于译者</strong></a>
+
+</header>
+
+
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
+<script>
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
+    last = +new Date();
+    
+
+    if (el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    } else {
+    	el.style.display='none';
+    }
+  };
+
+  tick();
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+         el = document.getElementById('loadingMask');
+         fadeOut(el);
+        var elements = document.querySelectorAll("img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("alt")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("alt"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+window.onload = ready;
+</script>
+
+<div class="content">
+	<h1>关于译者 <aside></aside></h1>
+	<p>译者信息：</p>
+<ul>
+<li>推特: <a href="https://twitter.com/dearmaxi">@dearmaxi</a></li>
+<li>公众号：土嗨英语（<em>PrankEnglish</em>）</li>
+</ul>
+<p>受不了 GitHub 对 <code>markdown</code> 脚注的支持，用 <code>hugo</code> 搭建了一个简单的网站，用来放一些翻译的文章。使用的主题是 <a href="https://github.com/schollz/">schollz</a> 制作的 <a href="https://github.com/schollz/onetwothree">onetwothree</a>，很棒的主题，感谢。于 2020 年 12 月 15 日。</p>
+<p>版权声明：自由转载-非商用-非衍生-保持署名（<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">创意共享3.0许可证</a>）</p>
+
+</div>
+
+
+
+
+	<p><small><em>Written December 16, 2020. </em>
+		 
+		Send feedback to <a  href="https://twitter.com/intent/tweet?text=%40dearmaxi%20%23postabout%20">@dearmaxi</a>.
+		
+	</small></p>
+
+	<p>
+	
+	<a href="/post/billionaire-built/" style="float:right;">成为亿万富翁 →</a>
+	</p>
+
+
+
+
+
+
+<footer>
+	<span style="font-size:0.5em"><p></p></span>
+	<span style="font-size:0.5em">This site was made with <a href="https://github.com/gohugoio/hugo">Hugo</a> using theme <a href="https://github.com/schollz/onetwothree">onetwothree</a> made by <a href="https://github.com/schollz">schollz</a>.</span>
+
+</footer>
+</body>
+</html>
