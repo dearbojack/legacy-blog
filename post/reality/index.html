@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>直面现实</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="直面现实">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="直面现实">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:site" content="@dearmaxi">
+	<meta name="twitter:creator" content="@dearmaxi">
+	<meta name="twitter:image:src" content="">
+	
+	
+	<meta name="og:title" content="直面现实">
+	<meta name="og:description" content="">
+	
+	<meta name="og:url" content="https://xiangji.ml/post/reality/">
+	<meta name="og:site_name" content="直面现实">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:author" content="dearmaxi">
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<script src="/js/caption.js"></script>
+</head>
+<body>
+
+<header >
+	<a href="/" style="float: left;color:#777;"><strong>荒藤别院</strong>
+	</a>
+	<a href="/index.xml" style="color:#777;float: left;"><strong>
+		&nbsp;
+	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+</strong></a>
+<a href="https://xiangji.ml/post/about/" style="color:#777;"><strong>关于</strong></a>
+
+</header>
+
+
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
+<script>
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
+    last = +new Date();
+    
+
+    if (el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    } else {
+    	el.style.display='none';
+    }
+  };
+
+  tick();
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+         el = document.getElementById('loadingMask');
+         fadeOut(el);
+        var elements = document.querySelectorAll("img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("alt")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("alt"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+window.onload = ready;
+</script>
+
+<div class="content">
+	<h1>直面现实 <aside></aside></h1>
+	<p><strong>作者</strong>：<a href="http://www.aaronsw.com/weblog/geremiah">亚伦·斯沃茨</a> / <strong>翻译</strong>：<a href="https://xiangji.ml/post/about/">PranKhan 土嗨英语</a></p>
+<hr>
+<blockquote>
+<p>有些东西我们知道是假的，但是我们还是会相信，最后发现自己错了的时候，又厚颜无耻地扭曲事实，以证明我们是对的。理想状况下，这个过程可以一直重复下去：唯一可能让这个过程停下来的就是当这种错误的信念撞上坚硬的现实，而这通常发生在战场上。——乔治·奥威尔，《鼻尖前的真相》</p>
+</blockquote>
+<hr>
+<p>如果你想理解专家，你首先得找到他们。因此，研究专家表现的心理学家首先要做的是给所谓的专家做个测试，看看他们到底有多厉害。在某些领域这很容易：比如在国际象棋中，高手可以吊打业余选手。但在其他领域，这要难得多，得多，得多。</p>
+<p>就拿权威专家观点来说。菲利普·特洛克（Philip Tetlock）在他长达20年的专家预测研究中发现，一个人只要预测“一切都将保持不变”，那他比大多数专家的预测的正确率更高<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。大量研究发现，与一个随机的陌生人共处一小时，比和专业的心理医生共处一小时的效果一样好<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>。再比如，在一项研究中，与未经训练的大学教授进行的治疗，对有心理疾病的大学生的帮助不亚于专业心理医生的治疗。<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> (这并不是说心理治疗没用&mdash;同一个研究也表明它是有帮助的&ndash;只不过有帮助的是谈一小时你的问题，而不是谈关于心理医生的事情。)</p>
+<p>你可能也猜到了，专家和心理医生对这些研究并不感冒。专家们还试图为自己开脱。如特洛克所写，这里的秘诀是在你的模糊预测中附加许多修饰语，这样你就能很好地解释几乎所有可能发生的事情。&ldquo;中国将会变得四分五裂，但只有当中国领导层未能巧妙地处理好某些平衡，只有当全球经济增长长期停滞不前，也只有当诸多情况满足之后才会发生……&quot;<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> 心理医生喜欢指出他们用自己的高超技术帮助了多少有心理问题的人（但他们逃避了一个问题，即技术不那么高超的人是不是能更好地帮助这些病人）。但这两组人都无法拿出他们所做的事情有效的明确证据。</p>
+<p>我们把他们和象棋大师比较一下。如果你跟一个象棋大师说他下不过随便一个大学教授，他可以马上和教授下一盘棋，证明你是错的。每次下棋，是输是赢他面前都有无可辩驳的证据。但心理医生总觉得自己在帮忙，其实他们只是引导病人走出了自己的童年，但实际上他们并没有带来任何世纪的改变。</p>
+<p>K·安德斯·埃里克森综合了数百项研究得出结论，专家与非专家的区别在于他所说的<strong>刻意练习</strong><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>。仅仅是练习是不够的&ndash;你坐在那里，整天别的不做只做预测，很可能也不会有什么提高；这里的练习指的是，你在练习之后会得到&quot;即时的信息反馈和对结果的了解&rdquo;<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>。</p>
+<p>比如说，在国际象棋中，你很快就会发现你是走了一步妙棋还是一个灾难性的错误，这一点在其他运动中更加明显（比如篮球运动中，练习罚球时，如果球没入网，那结果很明显）。因此，棋手们可以尝试不同的战术，看看哪些策略有效，哪些无效。但我们的专家没那么走运了。预测未来二十年内会有一波革命，这在做预测的当时可能会让人觉得很刺激，但你要等二十年后才知道这是否是个正确的预测。在这种时间跨度上，你很难做太多的刻意练习。</p>
+<p>我注意到野心勃勃的人经常会落入这种陷阱。他们想的是，随便一个老笨蛋都能预测明天会发生什么，但我想成为真正伟大的人，所以我会选择一个更难的挑战：我要预测的是一百年后会发生什么。它的形式多种多样：我不要再做一个像 <em>Instagram</em> 那样无聊的网站，我要弄的是人工智能；我要做的不是另一个无聊的实验，而是写一部宏伟的社会理论作品。</p>
+<p><strong>但是想伟大并不是定一个很难的目标就完了，实际上，定一个很难的目标和定一个很简单的目标一样，他们都是在逃避现实。</strong> 如果你选了一个容易的目标，你知道你总是会成功（因为它太容易了）；如果你选了一个很难的目标，你知道你永远不会失败（因为永远都是言之过早）。人工智能确实是个大问题&ndash;你怎么可能指望我们在短短十年内就能成功？ 但我们发誓，我们正在取得巨大的进步。</p>
+<p><strong>这里的诀窍是一路上给自己设置一系列小挑战。</strong> 如果你的创业公司最终要赚到100万美金，能不能先从赚到1000万开始？ 如果你的书最终要说服全世界，能不能先从说服你的朋友开始？ 与其把你所有的成功测试推到不确定的未来，不如现在就看你能不能通过一个很小的测试。</p>
+<p>而且重要的是，你要测试的东西要选对。如果你写的程序是为了让人们的生活更便利，那么重要的不是他们是否喜欢你在焦点小组中的模型（mockup），重要的是你是否能做出一个能真正改善他们生活的原型（prototype）。</p>
+<p>写自我提升类的书的最大问题是让人们真正接受你的建议。要讲一个令人信服的故事，改变人们看待问题的方式，这并不容易，但事实证明，这比写一些能说服人们从沙发上站起来改变生活方式的东西要容易得多。<strong>有一些事情书很在行，但强迫人们站起来做一些事情并不是其中之一。</strong></p>
+<p><strong>但是除非你听从这些书里的建议，否则它们是完全没有用的，这一点也颇为讽刺。</strong> 如果你只是一味地读书，总是觉得&quot;太有见地了！简直改变了一切&rdquo;，但行动上从来没有作出任何改变，那么很快这种感觉就会消退，你就会开始寻找另一本书来填补内心的空白。克里斯·麦克劳德把这种现象称之为<strong>顿悟成瘾</strong>。每当他们觉得自己偶然发现了一些改变人生的发现，他们就会觉得有了些许活力，但还是没有做出任何改变世界的事情，然后又回到他们默认生活：孤独，对生活充满了不满。他们最终总是会回到自己的画板前，尝试着想办法解决自己的问题，过不了多久，他们就又会想出最新的、貌似开天辟地、可以改变世界的见解。<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup></p>
+<p>不要让这种事情发生在你身上。<strong>今天就出去测试一下自己：挑一个你可能会失败的任务，挑一个足够难的任务，然后尝试着去成功。</strong> 现实是很痛苦的——继续做你知道自己擅长的事情，或者说挑一些太难的事情，没有一点明显的失败感——但不面对现实是不可能变得更好的。</p>
+<h3 id="注">注</h3>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Philip Tetlock, Expert Political Judgment: How Good Is It? How Can We Know? (2006). I don’t have my copy handy, so I checked this description against Philip Tetlock, “Reading Tarot on K Street,” The National Interest (September/October 2009), 57–67. ↩ <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Robyn M. Dawes, House of Cards: Psychology and Psychotherapy Built on Myth (1996). ↩ <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Hans H. Strupp and Suzanne W. Hadley, “Specific vs Nonspecific Factors in Psychotherapy: A Controlled Study of Outcome,” Archives of General Psychology 36:10 (1979), 1125–1136. ↩ <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Tetlock, “Reading Tarot,” 67. ↩ <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>K. Anders Ericsson, Ralf Th. Krampe, and Clemens Tesch-Römer, “The Role of Deliberate Practice in the Acquisition of Expert Performance,” Psychological Review, 100:3 (July 1993), 363–406. ↩ <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>Ericsson, “Role,” 367. ↩ <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>Chris Macleod, “‘Epiphany Addiction’,” Succeed Socially (visited 2012-09-09). ↩ <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+
+
+	<p><small><em>发布于 November 24, 2019 。 </em>
+		 
+		反馈给 <a  href="https://twitter.com/intent/tweet?text=%40dearmaxi%20%23postreality%20">@dearmaxi</a>。
+		
+	</small></p>
+
+	<p>
+	<a href="/post/bluedot/">← 那暗蓝一点</a>&nbsp;
+	<a href="/post/mistakes/" style="float:right;">珍惜错误 →</a>
+	</p>
+
+
+
+
+
+
+<footer>
+	<span style="font-size:0.7em"><p>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</p></span>
+	<span style="font-size:0.5em">Made with <a href="https://github.com/gohugoio/hugo">Hugo</a>. Theme: <a href="https://github.com/schollz/onetwothree">onetwothree</a> by <a href="https://github.com/schollz">schollz</a>.</span>
+
+</footer>
+</body>
+</html>

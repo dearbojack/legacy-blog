@@ -4,16 +4,21 @@
   
   <url>
     <loc>https://xiangji.ml/post/</loc>
-    <lastmod>2020-12-20T13:34:34+08:00</lastmod>
+    <lastmod>2020-12-24T18:25:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://xiangji.ml/post/wedding/</loc>
-    <lastmod>2020-12-20T13:34:34+08:00</lastmod>
+    <loc>https://xiangji.ml/post/style/</loc>
+    <lastmod>2020-12-24T18:25:15+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://xiangji.ml/</loc>
+    <lastmod>2020-12-24T18:25:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiangji.ml/post/wedding/</loc>
     <lastmod>2020-12-20T13:34:34+08:00</lastmod>
   </url>
   
@@ -33,11 +38,6 @@
   </url>
   
   <url>
-    <loc>https://xiangji.ml/post/about/</loc>
-    <lastmod>2020-12-16T15:21:30+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://xiangji.ml/post/live/</loc>
     <lastmod>2020-02-20T14:21:19+08:00</lastmod>
   </url>
@@ -45,6 +45,16 @@
   <url>
     <loc>https://xiangji.ml/post/test/</loc>
     <lastmod>2020-01-09T16:20:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiangji.ml/post/mistakes/</loc>
+    <lastmod>2019-12-24T18:33:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiangji.ml/post/reality/</loc>
+    <lastmod>2019-11-24T18:42:57+08:00</lastmod>
   </url>
   
   <url>
@@ -60,6 +70,11 @@
   <url>
     <loc>https://xiangji.ml/post/jobs/</loc>
     <lastmod>2017-09-27T14:23:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xiangji.ml/post/about/</loc>
+    <lastmod>2017-02-16T15:21:30+08:00</lastmod>
   </url>
   
   <url>
