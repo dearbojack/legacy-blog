@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 彪記譯館</title>
+    <title>Posts on 彪の譯館</title>
     <link>https://xiangji.ml/post/</link>
-    <description>Recent content in Posts on 彪記譯館</description>
+    <description>Recent content in Posts on 彪の譯館</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Dec 2020 18:49:24 +0800</lastBuildDate>
@@ -84,7 +84,7 @@ Airbnb 在 YC 孵化期间的目标是实现我们所谓的&amp;quot;拉面盈�
 他们这么做不仅让网上的房源更加吸引人，在这个过程中，他们也加深了对房东群体的了解。他们第一趟纽约之行回来后，我问他们发现了什么出乎意料的东西，他们说，最让他们惊讶的是，有好多房东和他们一样，他们需要这些钱支付自己的房租。不要忘了，2008年的经济衰退是几十年所未见的，而纽约是第一个受到波及的城市。人们需要这样的服务，这无疑增加了他们的使命感。
 2009年1月下旬，也就是他们进入 YC 孵化器三周后，他们的努力开始显示成效，他们的各项指标也开始攀升。但很难确定这究竟是用户的增长，还是只是数据的随机波动。到了2月份，已经很明显是真正的用户增长。2月的第1周，他们赚了460美元，第2周赚了897美元，第3周赚了1428美元。就这样，他们起飞了。2月22日，布莱恩给我发了一封电子邮件，宣布他们成功实现了拉面盈利，并给出了最近三周的数据。
 “你知道接下来该做什么吧，”我回复说。
-“我们不会放慢脚步，”布莱恩的回复只有8个字:。</description>
+“我们不会放慢脚步，”布莱恩的回复只有8个字。</description>
     </item>
     
     <item>
@@ -319,7 +319,9 @@ Ray Dalio 写道:
       <pubDate>Thu, 16 Feb 2017 15:21:30 +0800</pubDate>
       
       <guid>https://xiangji.ml/post/about/</guid>
-      <description>Twitter: @dearmaxi 公众号/知乎：土嗨英语（PrankEnglish）   此地原名：孤月译馆。
+      <description>Twitter: @dearmaxi 公众号/知乎：土嗨英语（PrankEnglish）  你最应该读的 TOP X 篇 如果你想知道我觉得哪几篇最有价值，可以看看这个列表。
+ 聪明人怎么做笔记 拥抱痛苦 成为亿万富翁 如何独立思考  对我来说，这几篇改变了我看问题的角度，读的时候有醍醐灌顶的感觉。其实这里翻译的东西都有些价值，不然我也不会浪费自己的时间去翻译，对不对？
+ 此地原名：孤月译馆。
 取「孤月印萬川」中「孤月」二字爲名。世間之月唯一，然其映於萬川之影或明或暗，或圓或缺，並無定數。文之譯亦如是。文之爲諸人所用者，亦如是也。
 ——December 04, 2020
  受不了 GitHub 糟糕的 markdown 脚注渲染，用 hugo 搭建了这个简单的网站，用来放一些翻译的文章。使用的主题是 schollz 制作的 onetwothree。很棒的主题，感谢。
@@ -328,6 +330,7 @@ Ray Dalio 写道:
 —— December 26, 2020
  改成「彪記譯館」了，因为霸氣。
 —— December 29, 2020
+ 又改了。
  本站所有文章版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</description>
     </item>
     
