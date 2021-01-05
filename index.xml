@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>彪の譯館</title>
+    <title>Just Yi</title>
     <link>https://xiangji.ml/</link>
-    <description>Recent content on 彪の譯館</description>
+    <description>Recent content on Just Yi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Dec 2020 18:49:24 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jan 2021 16:11:59 +0800</lastBuildDate>
     
 	<atom:link href="https://xiangji.ml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>聪明人怎么做笔记（全部样章 v1.0）</title>
+      <title>成本和价值</title>
+      <link>https://xiangji.ml/post/cost/</link>
+      <pubDate>Fri, 01 Jan 2021 16:11:59 +0800</pubDate>
+      
+      <guid>https://xiangji.ml/post/cost/</guid>
+      <description>作者：Seth Godin / 翻译：PranKhan 土嗨英语
+ 我有本书花了一年才写完，每天写十小时。另一本书只花了三周时间就写完了。两本书卖一样的钱。快速写完的那本销量是另一本的30倍。
+一瓶200块钱的酒的成本可能和一瓶35块钱的酒差不多。所以，人们不会关注东西的成本，他们更关注东西的价值。你的用户也不关心你费了多大力气做东西，他们只关心你做出来的东西对他们有没有用。</description>
+    </item>
+    
+    <item>
+      <title>聪明人怎么做笔记（样章）</title>
       <link>https://xiangji.ml/post/notes/</link>
       <pubDate>Mon, 28 Dec 2020 18:49:24 +0800</pubDate>
       
@@ -314,14 +325,14 @@ Ray Dalio 写道:
     </item>
     
     <item>
-      <title>关于</title>
+      <title>About</title>
       <link>https://xiangji.ml/post/about/</link>
       <pubDate>Thu, 16 Feb 2017 15:21:30 +0800</pubDate>
       
       <guid>https://xiangji.ml/post/about/</guid>
-      <description>Twitter: @dearmaxi 公众号/知乎：土嗨英语（PrankEnglish）  你最应该读的 TOP X 篇 如果你想知道我觉得哪几篇最有价值，可以看看这个列表。
- 聪明人怎么做笔记 拥抱痛苦 成为亿万富翁 如何独立思考  对我来说，这几篇改变了我看问题的角度，读的时候有醍醐灌顶的感觉。其实这里翻译的东西都有些价值，不然我也不会浪费自己的时间去翻译，对不对？
- 此地原名：孤月译馆。
+      <description>Twitter: @dearmaxi 公众号/知乎：土嗨英语（PrankEnglish）  你最应该读一读的 X 篇 如果你赶时间的话，至少看看这几篇：
+ 聪明人怎么做笔记 拥抱痛苦 成为亿万富翁 如何独立思考  这几篇改变了我看问题的角度。
+ 原名：孤月译馆。
 取「孤月印萬川」中「孤月」二字爲名。世間之月唯一，然其映於萬川之影或明或暗，或圓或缺，並無定數。文之譯亦如是。文之爲諸人所用者，亦如是也。
 ——December 04, 2020
  受不了 GitHub 糟糕的 markdown 脚注渲染，用 hugo 搭建了这个简单的网站，用来放一些翻译的文章。使用的主题是 schollz 制作的 onetwothree。很棒的主题，感谢。
@@ -330,7 +341,7 @@ Ray Dalio 写道:
 —— December 26, 2020
  改成「彪記譯館」了，因为霸氣。
 —— December 29, 2020
- 又改了。
+ 又又改了。
  本站所有文章版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</description>
     </item>
     
