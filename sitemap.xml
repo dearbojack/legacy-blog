@@ -1,98 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://xiangji.ml/</loc>
+    <loc>https://dearbojack.github.io/post/</loc>
     <lastmod>2021-01-01T16:11:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/</loc>
     <lastmod>2021-01-01T16:11:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/cost/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/cost/</loc>
     <lastmod>2021-01-01T16:11:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/notes/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/notes/</loc>
     <lastmod>2020-12-28T18:49:24+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/style/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/style/</loc>
     <lastmod>2020-12-24T18:25:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/wedding/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/wedding/</loc>
     <lastmod>2020-12-20T13:34:34+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/bnb/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/bnb/</loc>
     <lastmod>2020-12-19T14:05:35+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/think/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/think/</loc>
     <lastmod>2020-12-17T08:52:44+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/ace/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/ace/</loc>
     <lastmod>2020-12-16T16:21:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/live/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/live/</loc>
     <lastmod>2020-02-20T14:21:19+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/test/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/test/</loc>
     <lastmod>2020-01-09T16:20:21+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/mistakes/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/mistakes/</loc>
     <lastmod>2019-12-24T18:33:59+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/reality/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/reality/</loc>
     <lastmod>2019-11-24T18:42:57+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/bluedot/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/bluedot/</loc>
     <lastmod>2019-08-09T14:30:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/pain/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/pain/</loc>
     <lastmod>2019-06-17T18:54:37+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/jobs/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/jobs/</loc>
     <lastmod>2017-09-27T14:23:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/post/about/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/post/about/</loc>
     <lastmod>2017-02-16T15:21:30+08:00</lastmod>
+  </url><url>
+    <loc>https://dearbojack.github.io/categories/</loc>
+  </url><url>
+    <loc>https://dearbojack.github.io/tags/</loc>
   </url>
-  
-  <url>
-    <loc>https://xiangji.ml/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://xiangji.ml/tags/</loc>
-  </url>
-  
 </urlset>
