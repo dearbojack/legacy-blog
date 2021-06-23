@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC');
 body, li  p {
-	font-family: 'Merriweather', serif;
+	font-family: 'Merriweather', 'Noto Serif SC', Miscrosoft JhengHei, serif;
 }
 
 h1,h2,h3,h4,h5,h6,header,header.a {
 	text-transform: lowercase;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: 'Alegreya Sans SC', Helvetica, PingFang, Miscrosoft JhengHei, sans-serif;
 }
 
 header,header.a{
@@ -15,7 +16,7 @@ header,header.a{
 
 @media all {
 	html {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	body > * {
 		font-size: 100%;
@@ -25,7 +26,7 @@ header,header.a{
 }
 @media all and (max-width:840px){
 	html {
-		font-size: 17px;
+		font-size: 16px;
 	}
 	body > * {
 		margin-left: 5.5rem;
